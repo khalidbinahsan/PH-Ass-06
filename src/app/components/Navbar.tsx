@@ -5,12 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react"; 
 import Image from "next/image";
+import { useFitLog } from "@/context/FitLogContext";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const closeMenu = () => setIsMobileMenuOpen(false);
-
+  const { planWorkouts, savedWorkouts } = useFitLog();
   return (
     <nav className="bg-[#0a0a0a] border-b border-zinc-800 relative z-50">
       <div className="max-w-[1232px] mx-auto w-full flex items-center justify-between px-4 py-4 md:px-8">
@@ -53,7 +54,7 @@ export default function Navbar() {
           >
             Plan
             <span className="flex items-center justify-center min-w-[24px] h-6 px-2 rounded-full bg-[#ccff00] text-black font-bold text-xs">
-              0
+              {planWorkouts.length}
             </span>
           </Link>
           <Link 
@@ -62,7 +63,7 @@ export default function Navbar() {
           >
             Saved
             <span className="flex items-center justify-center min-w-[24px] h-6 px-2 rounded-full border border-zinc-600 text-zinc-300 font-bold text-xs">
-              0
+              {savedWorkouts.length}
             </span>
           </Link>
         </div>
@@ -111,7 +112,7 @@ export default function Navbar() {
             >
               Plan
               <span className="flex items-center justify-center min-w-[24px] h-6 px-2 rounded-full bg-[#ccff00] text-black font-bold text-xs">
-                0
+                {planWorkouts.length}
               </span>
             </Link>
             <Link 
@@ -121,7 +122,7 @@ export default function Navbar() {
             >
               Saved
               <span className="flex items-center justify-center min-w-[24px] h-6 px-2 rounded-full border border-zinc-600 text-zinc-300 font-bold text-xs">
-                0
+                {savedWorkouts.length}
               </span>
             </Link>
           </div>
