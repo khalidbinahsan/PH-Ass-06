@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { Loader2 } from "lucide-react";
-import WrokoutCard from "./WrokoutCard";
+import WrokoutCard from "../components/WrokoutCard";
 import {WorkoutType} from '../../types/WorkoutType';
 
 
-export default function Library() {
+export default function WorkoutPage() {
   const [workouts, setWorkouts] = useState<WorkoutType[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
