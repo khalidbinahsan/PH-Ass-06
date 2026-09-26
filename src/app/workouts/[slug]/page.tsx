@@ -152,7 +152,7 @@ export default function WorkoutDetailsPage() {
           <div className="flex flex-col sm:flex-row gap-4 mt-auto">
             <button 
               onClick={handleAddToPlan}
-              className={`flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-bold text-sm uppercase tracking-wide transition-colors ${
+              className={`flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-bold text-sm uppercase cursor-pointer tracking-wide transition-colors ${
                 inPlan 
                   ? "bg-[#2d3a00] text-[#ccff00] hover:bg-[#384700]" 
                   : "bg-[#ccff00] hover:bg-[#bce600] text-black"
