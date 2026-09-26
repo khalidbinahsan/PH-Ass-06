@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Oswald } from 'next/font/google';
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className={`${inter.variable} ${oswald.variable} font-sans antialiased bg-black text-white`}>
         <Navbar></Navbar>
         <main>{children}</main>
+        <Footer></Footer>
         </body>
     </html>
   );

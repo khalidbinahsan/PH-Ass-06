@@ -1,69 +1,41 @@
 import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <section className="pt-8 pb-12 max-w-[1232px] mx-auto w-full px-[15px] md:px-8">
+      <div className="bg-[#15171D] rounded-[32px] flex flex-col md:flex-row items-center justify-between p-8 md:p-12 lg:p-16 gap-10">
+        <div className="w-full md:w-3/5 flex flex-col items-start gap-6">
+          <span className="text-[#C2F800] text-sm font-bold tracking-widest uppercase">
+            Workout Library
+          </span>
+          
+          <h1 className="font-oswald text-4xl md:text-6xl lg:text-[60px]} font-bold text-white uppercase leading-[1.1]">
+            Train with intent. Log <br className="hidden md:block" /> every set.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          
+          <p className="text-zinc-400 text-base md:text-lg max-w-md leading-relaxed">
+            FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today's plan, and watch the week's work add up.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          
+          <a 
+            href="#library" 
+            className="mt-2 bg-[#C2F800] hover:bg-[#bce600] text-black text-sm font-bold uppercase tracking-wide px-8 py-4 rounded-lg flex items-center gap-2 transition-colors"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            Browse Workouts
           </a>
         </div>
-      </main>
-    </div>
+
+        <div className="w-full md:w-2/5 flex justify-center md:justify-end">
+          <Image 
+            src="/images/hero-machine.png" 
+            alt="3D anatomy figure on a preacher curl machine" 
+            width={334} 
+            height={334} 
+            priority
+            className="w-full h-auto object-contain drop-shadow-2xl"
+          />
+        </div>
+        
+      </div>
+    </section>
   );
 }
