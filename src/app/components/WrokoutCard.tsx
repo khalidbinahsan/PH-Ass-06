@@ -46,7 +46,7 @@ const WrokoutCard = ({data}: WorkoutProps) => {
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Flame className="w-3.5 h-3.5" />
-                    <span>{data.calories} kcal</span>
+                    <span>{data.caloriesBurned} kcal</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Star className="w-3.5 h-3.5" />

@@ -2,9 +2,9 @@ export interface WorkoutType {
   id: string | number;
   name: string;
   image: string;
-  muscleGroups: string[]; // Adjust if the API uses a different key like 'categories' or 'tags'
+  muscleGroups: string[];
   equipment: string;
-  duration: number; // in minutes
-  calories: number;
+  duration: number; 
+  caloriesBurned: number;
   rating: number;
 }

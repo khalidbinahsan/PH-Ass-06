@@ -108,7 +108,7 @@ export default function WorkoutDetailsPage() {
 
           {/* Category Tags */}
           <div className="flex flex-wrap gap-2 mb-8">
-            {workout.category?.map((cat: string, index: number) => (
+            {workout.muscleGroups?.map((cat: string, index: number) => (
               <span 
                 key={index} 
                 className="bg-[#ccff00] text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide"
@@ -126,7 +126,7 @@ export default function WorkoutDetailsPage() {
               <SpecRow label="Sets" value={workout.sets || "4"} />
               <SpecRow label="Reps" value={workout.reps || "6-8"} />
               <SpecRow label="Duration" value={`${workout.duration} min`} />
-              <SpecRow label="Calories" value={`${workout.calories} kcal`} />
+              <SpecRow label="Calories" value={`${workout.caloriesBurned} kcal`} />
               <SpecRow label="Rating" value={workout.rating} borderBottom={false} />
             </div>
           </div>
